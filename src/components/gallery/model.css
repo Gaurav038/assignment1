@@ -1,0 +1,200 @@
+.Task-Conatiner {
+    width: 945px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    border-radius: 0px 0px 16px 16px;
+  }
+  .Task-Container__img {
+    width: 945px;
+    height: 482.98px;
+    border-radius: 15.9662px 15.9662px 0px 0px;
+    position: relative;
+  }
+  .Task-Conatiner .popup__close {
+    position: absolute;
+    width: 4%;
+    height: 8%;
+    left: 98%;
+    top: -12px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .Task-Conatiner .popup__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15.9662px 15.9662px 0px 0px;
+  }
+  
+  .Task-Conatiner .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8.24px;
+    position: absolute;
+    width: 58.47px;
+    left: 10%;
+    top: 89%;
+    color: white;
+  }
+  .Task-Conatiner .css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
+    color: white !important;
+    font-family: "Montserrat" !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 8.23529px !important;
+    line-height: 10px !important;  
+    text-align: center !important;
+  }
+  
+  .Task-Conatiner .popup__download {
+    position: absolute;
+    width: 20%;
+    height: 8%;
+    left: 77%;
+    top: 87%;
+    color: white;
+    border: none;
+    background: #3cb46e;
+    border-radius: 4px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: -0.02em;
+  }
+  
+  .Task-Container__content {
+    background: #232323;
+    width: 100%;
+    height: 247.51px;
+    color: white;
+  }
+  .Task-Conatiner .userDetails {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Task-Conatiner .user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Task-Conatiner .profile {
+    margin: 25px 15px 20px 33px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+  }
+  
+  .Task-Conatiner .userName {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin-right: 35px;
+    margin-top: -18px;
+  }
+  .Task-Conatiner .userName > p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .Task-Conatiner .userName_i {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 5px;
+    color: #a7a7a7;
+  }
+  
+  .Task-Conatiner .userLinks {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    margin: 5px;
+    color: #a7a7a7;
+  }
+  .Task-Conatiner .userLink__i {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    font-size: 12px;
+    margin-left: 15px;
+  }
+  .Task-Conatiner .css-i4bv87-MuiSvgIcon-root {
+    font-size: 1rem;
+  }
+  .Task-Conatiner .userLikes {
+    font-weight: 700;
+    font-size: 14.1538px;
+    line-height: 17px;   
+    margin-right: 41px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #858484;
+  }
+  .Task-Conatiner .span-2 {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+  .Task-Conatiner .tags{
+    margin-left: 30px;
+  }
+  .Task-Conatiner .tags > span {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    color: #e5e5e5;
+  }
+
+  .Task-Conatiner .title-div {
+    display: flex;
+    gap: 0 15px;
+    flex-wrap: wrap;
+  }
+  .Task-Conatiner .tags-title {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: #ececec;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 55%;
+  }
+
+  @media(max-width: 968px){
+    .Task-Conatiner, .Task-Container__img, .Task-Container__content{
+        width: 98%;
+    }
+
+    .userLikes {
+        font-size: 10px;
+    }
+
+    .Task-Conatiner .popup__close {
+        width: 5%;
+    }
+}

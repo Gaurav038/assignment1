@@ -1,0 +1,30 @@
+.search_heading{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0em auto 3em auto;
+}
+.head{
+    width: 100%;
+}
+
+.cat-container{
+
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.cat-container div{
+    box-sizing: border-box;
+    width: 122px;
+    height: 39px;
+    border: 1px solid #C4C4C4;
+    border-radius: 4px;
+    margin: 4px 8px;
+    padding: 11px 28px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px;
+}

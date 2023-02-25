@@ -1,0 +1,121 @@
+
+.gallery{
+    width: 90%;
+    margin: 2em auto 5em auto;
+    column-count: 4;
+    column-gap: 15px;
+  }
+
+  .gallery .wrapper {
+    grid-template-rows: 1fr auto;
+    margin-bottom: 1.5em;
+    break-inside: avoid;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.425);
+    min-height: 200px;
+    background-color: black;
+    animation: fadeIn 1s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .gallery div .main-image{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    vertical-align: top;
+  }
+
+  .gallery .user {
+    display: flex;
+    justify-content: space-between;
+  }
+  .gallery .userName {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin: auto;
+  }
+  .gallery .userName > p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .gallery .userName_i {
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 5px;
+    color: #a7a7a7;
+  }
+  
+  .gallery .profile {
+    margin: 25px 15px 20px 33px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+  }
+  .gallery .userDetail{
+    display: flex;
+  }
+  .gallery .userLikes {
+    font-weight: 700;
+    font-size: 14.1538px;
+    line-height: 17px;   
+    display: flex;
+    align-items: center;
+    color: #858484;
+    padding: 23px;
+  }
+  .gallery .span-2 {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+  }
+
+  
+  
+  @media screen and (max-width: 1000px) {
+    .gallery {
+      column-count: 3;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+   
+  
+    .gallery {
+      column-count: 2;
+    }
+  
+  }
+  
+  @media screen and (max-width: 600px) {
+    .gallery {
+      column-count: 1;
+    }
+  
+  }
+
+.popUp-img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+
+}
+.show-model{
+    display: block;
+}
+
