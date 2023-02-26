@@ -61,6 +61,9 @@ header .MuiSvgIcon-root{
         display: none;
     }
 
+    header{
+        height: 70px;
+    }
     .navbar .toggle-btn{
         display: block;
     }
