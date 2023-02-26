@@ -3,23 +3,34 @@ import axios from 'axios'
 import "./App.css"
 import MainSearch from './components/herodiv/MainSearch'
 import NavBars from './components/navbar/NavBars'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Gallery from './components/gallery/Gallery'
 import Heading from './components/seachHeading/Heading'
-
+import Loader from './components/Loader'
 
 function App() {
-    const [word, setWord] = useState("c")
+    const [word, setWord] = useState("nature")
     const [result, setResult] = useState([])
     const [searchHeading, setSearchHeading] = useState()
+    const [darkMode, setDarkMode] = useState(false)
+    const [loading, setLoading] = useState(true);
 
-    const changePhoto = () => {
-        axios.get(`https://api.unsplash.com/search/photos?page=1&query=${word}&client_id=4UhQL7IdZ55_AGB-WhQQNVlxTwun4XNQI0lXn6L-gqM`)
-            .then((response) => {
-                setResult(response.data.results);
-            })
+    const toggler = () => {
+        darkMode ? setDarkMode(false) : setDarkMode(true);
+
     }
-//  console.log(result)
+
+    const changePhoto = async() => {
+
+        try {
+            setLoading(true);
+            const res = await axios.get(`https://api.unsplash.com/search/photos?query=${word}&client_id=ZCKk-F23ieH8W6sl_14FRpq3OQDanu4_C8NGVf0ie7Q`)
+            setResult(res.data.results);
+          } catch (error) {
+            console(error.message);
+          }
+           setLoading(false);
+    }
+
     const changeSearchWord = (value) => {
         setWord(value)
     }
@@ -32,16 +43,27 @@ function App() {
       changePhoto()
     }, [word])
 
-    
-    console.log(searchHeading, "--------")
-    
+        
     return (
-        <>
-            <NavBars changeWord={changeSearchWord} showheading={showheading} />
-            {!searchHeading && <MainSearch changeWord={changeSearchWord} showheading={showheading} />}
-            {searchHeading && <Heading searchHeading={searchHeading} />}
-            <Gallery result={result} />
-        </>
+        <div className='app' data-theme={darkMode} >
+
+            {/*--------------- NavBar section----------------- */}
+            <NavBars changeWord={changeSearchWord} showheading={showheading} toggler={toggler} darkMode={darkMode} />
+
+            {/*--------------- Mid section----------------- */}
+             {searchHeading 
+                    ? (<Heading searchHeading={searchHeading} />)
+                    : (<MainSearch changeWord={changeSearchWord} showheading={showheading} />)
+             }
+
+             {/*--------------- Result section----------------- */}
+             {
+                loading 
+                    ? <Loader />        
+                    : <Gallery result={result} />
+             }
+            
+        </div>
     )
 }
 

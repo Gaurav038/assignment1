@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom'
-import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react'
 import "./NavBars.css"
-import SearchBar from '../search/SearchBar';
-function NavBars({changeWord, showheading}) {
+import SearchBar from '../Navsearch/SearchBar';
+import {Switch} from 'antd';
+
+function NavBars({changeWord, showheading, toggler, darkMode}) {
+
+
   return (
     <header>
         <div className='navbar' >
             <div className='logo' >
-                <Link to="/">Image Gallery</Link>
+                <Link to="/">Gallery</Link>
             </div>
             <div className='action-btn' >
                 <SearchBar changeWord={changeWord} showheading={showheading} />
@@ -19,8 +22,8 @@ function NavBars({changeWord, showheading}) {
                 <li><Link to="/">Collection</Link></li>
                 <li><Link to="/">Community</Link></li>
                 <div className='toggle-box'>
-                    <div>Dark Mode</div>
-                    <div><ToggleOnIcon /></div> 
+                    <div>{darkMode ? 'Light Mode' : 'Dark Mode'}</div>
+                    <div> <Switch onClick={toggler} /> </div>
                 </div>
             </ul>
             <div className='toggle-btn' >

@@ -1,22 +1,23 @@
 
 .gallery{
     width: 90%;
-    margin: 2em auto 5em auto;
+    margin: 2em auto 0 auto;
     column-count: 4;
     column-gap: 15px;
+    padding-bottom: 4em;
   }
 
   .gallery .wrapper {
     grid-template-rows: 1fr auto;
     margin-bottom: 1.5em;
     break-inside: avoid;
-    color: white;
+    color: var(--text-primary);
     position: relative;
     overflow: hidden;
     border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.425);
+    /* border: 1px solid rgba(255, 255, 255, 0.425); */
     min-height: 200px;
-    background-color: black;
+    background-color: var(--form-bg);
     animation: fadeIn 1s ease-in-out;
     cursor: pointer;
   }
@@ -33,6 +34,8 @@
   .gallery .user {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 64px;
   }
   .gallery .userName {
     font-family: "Montserrat";
@@ -53,13 +56,13 @@
     font-size: 12px;
     line-height: 18px;
     margin-top: 5px;
-    color: #a7a7a7;
+    color: var(--text-primary);
   }
   
   .gallery .profile {
-    margin: 25px 15px 20px 33px;
-    width: 56px;
-    height: 56px;
+    margin: auto 14px;    
+    width: 39px;
+    height: 39px;
     border-radius: 50%;
   }
   .gallery .userDetail{
@@ -71,7 +74,7 @@
     line-height: 17px;   
     display: flex;
     align-items: center;
-    color: #858484;
+    color: var(--text-primary);
     padding: 23px;
   }
   .gallery .span-2 {

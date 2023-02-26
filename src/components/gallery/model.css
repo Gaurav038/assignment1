@@ -72,10 +72,10 @@
   }
   
   .Task-Container__content {
-    background: #232323;
+    background: var(--background);
     width: 100%;
     height: 247.51px;
-    color: white;
+    color: var(--text-primary);
   }
   .Task-Conatiner .userDetails {
     display: flex;
@@ -114,7 +114,7 @@
     font-size: 12px;
     line-height: 18px;
     margin-top: 5px;
-    color: #a7a7a7;
+    color: var(--text-primary);
   }
   
   .Task-Conatiner .userLinks {
@@ -128,7 +128,7 @@
     /* identical to box height */
     text-align: center;
     margin: 5px;
-    color: #a7a7a7;
+    color: var(--text-primary);
   }
   .Task-Conatiner .userLink__i {
     display: flex;
@@ -137,9 +137,7 @@
     font-size: 12px;
     margin-left: 15px;
   }
-  .Task-Conatiner .css-i4bv87-MuiSvgIcon-root {
-    font-size: 1rem;
-  }
+  
   .Task-Conatiner .userLikes {
     font-weight: 700;
     font-size: 14.1538px;
@@ -149,7 +147,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    color: #858484;
+    color: var(--text-primary);
   }
   .Task-Conatiner .span-2 {
     display: flex;
@@ -164,7 +162,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
-    color: #e5e5e5;
+    color: var(--text-primary);
   }
 
   .Task-Conatiner .title-div {
@@ -190,8 +188,8 @@
         width: 98%;
     }
 
-    .userLikes {
-        font-size: 10px;
+    .Task-Conatiner .userName, .userLink__i, .userLikes {
+        font-size: 10px !important;
     }
 
     .Task-Conatiner .popup__close {

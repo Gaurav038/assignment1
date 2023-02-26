@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import "./SearchBar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
-import axios from "axios";
 
 function SearchBar({changeWord, showheading}) {
-  const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
   const handleKeyDown = (event) => {
@@ -28,7 +26,7 @@ const handleFilter = (event) => {
   return (
     <div className="search">
       <div className="searchInputs">
-        <div>
+        <div className="searchIcon">
           <SearchIcon />
         </div>
         <input

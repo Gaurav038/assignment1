@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*---------- dark mode config --------------*/
+
+:root {
+  --background: #ffffff;
+  --text-primary: #4F4F4F  ;
+  --form-bg: #fff;
+  --border: #333;
+}
+
+[data-theme='true'] {
+  --background: #232323;
+  --text-primary: #fff;
+  --form-bg: #141414;
+  --border: #808080;
+}

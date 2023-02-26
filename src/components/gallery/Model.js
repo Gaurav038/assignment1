@@ -60,14 +60,14 @@ function Model({show, data, hideModel}) {
                 className="profile"
               />
               <div className="userName">
-                <p>Jacob Jones</p>
+                <p>{data.user.first_name}</p>
                 <i className="userName_i">@jacobclicks</i>
               </div>
 
               <div className="userLinks">
                 <i className="userLink__i">
                   <InstagramIcon />
-                  /jacobclicks
+                  {data.user.instagram_username}
                 </i>
                 <i className="userLink__i">
                   <TwitterIcon />

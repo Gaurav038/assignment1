@@ -63,6 +63,11 @@
     font-size: 14px;
     font-weight: 500;
   }
+
+  .hero-search-form input:focus {
+    outline: none;
+    color: #C4C4C4;
+  }
   
  
 

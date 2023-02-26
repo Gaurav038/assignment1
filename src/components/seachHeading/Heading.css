@@ -6,10 +6,11 @@
 }
 .head{
     width: 100%;
+    color: var(--text-primary);
 }
 
 .cat-container{
-
+    color: var(--text-primary);
     display: flex;
     flex-wrap: nowrap;
 
